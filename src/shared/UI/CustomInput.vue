@@ -23,8 +23,6 @@
 .inputWrapper{
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
     .subtitle{
         margin-bottom: 8px;
     }

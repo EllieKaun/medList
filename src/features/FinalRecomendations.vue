@@ -17,7 +17,6 @@ const handleUpdArr = (value: string) => {
     dataValue.value = value;
 }
 const handleAddItem = () => {
-    console.log('handle add item')
     dataArr.value.push(dataValue.value);
 }
 const handleDeleteItem = (i: number) => {
@@ -26,7 +25,6 @@ const handleDeleteItem = (i: number) => {
 const displayedData = ref()
 
 const handleSave = () => {
-    console.log('handle save')
     setRecomendations([...dataArr.value])
     displayedData.value = handleGenerateTable();
 }
@@ -92,6 +90,5 @@ const currDate = `${day}/${month}/${year} ${hours}:${minutes}`
         align-items: center;
         gap: 10px;
         margin-top: 8px;
-
     }
 </style>

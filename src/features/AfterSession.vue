@@ -33,7 +33,6 @@ const {
     const tableData = ref<IData[]>([])
 
     const handleClick = () => {
-        console.log(createTableRow(), '123')
         tableData.value.push(createTableRow())
     }
 

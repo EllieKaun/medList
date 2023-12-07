@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { watch } from 'vue';
-
-
 const props = defineProps(['data']);
-watch(props, (newValue) => console.log(newValue.data, 'props data 123 recomendations'))
 
-// import { useRecomendationsStore } from '@/stores/recomendations';
-// const {recomendations} = useRecomendationsStore();
 </script>
 
 <template>

@@ -25,6 +25,7 @@ const handleSearch = (value: string) => {
 
 const handleClick = (value: string) => {
     props.saveCurr(value);
+    alert(`${value} выбран`)
 }
 </script>
 
@@ -36,11 +37,14 @@ const handleClick = (value: string) => {
         </div>
         <div class="block">
             <CustomInput :handleChange="handleUpdArr"/>
-            <div @click="handleAddItem">+</div>
+            <div class="icon" @click="handleAddItem">+</div>
         </div>
         <div class="block" v-for="(item, i) in contentArr" :key="item">
-            <div @click="handleClick(item)">{{ item }}</div>
-            <div @click="handleDeleteItem(i)">-</div>
+            <div @click="handleClick(item)" class="item">
+                <div>{{ item }}</div>
+            </div>
+            <div class="icon" @click="handleDeleteItem(i)">-</div>
+
         </div>
     </div>
 </template>
@@ -55,5 +59,27 @@ const handleClick = (value: string) => {
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.item{
+    display: flex;
+    width: 100%;
+    border: 1px solid;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 4px 8px;
+    &:hover{
+        background-color: grey;
+        color: #fff;
+    }
+}
+.icon{
+        border: 1px solid grey;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0px 10px;
+
 }
 </style>
